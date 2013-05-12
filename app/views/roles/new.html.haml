@@ -1,0 +1,5 @@
+= simple_form_for(@role, :html => {:class => 'form-vertical' }) do |f|
+  = f.error_notification
+  = display_base_errors @role
+  = f.input :name, :autofocus => true, :required=> true
+  = f.button :submit, 'Create', :class => 'btn-primary'

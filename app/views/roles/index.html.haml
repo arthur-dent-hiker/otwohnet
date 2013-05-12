@@ -1,0 +1,5 @@
+%h1 Roles
+- @roles.each do |r|
+	= r.name
+	%br
+= link_to "Create Role", new_role_path

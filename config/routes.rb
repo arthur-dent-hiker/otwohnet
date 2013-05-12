@@ -1,4 +1,6 @@
 Otwohnet::Application.routes.draw do
+  resources :roles
+
   resources :categories
 
   authenticated :user do
