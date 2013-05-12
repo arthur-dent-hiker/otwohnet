@@ -1,4 +1,6 @@
 Otwohnet::Application.routes.draw do
+  resources :categories
+
   authenticated :user do
     root :to => 'home#index'
   end

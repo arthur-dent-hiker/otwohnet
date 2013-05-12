@@ -1,0 +1,5 @@
+%h1 Categories
+- @categories.each do |c|
+	= c.name
+	%br
+= link_to 'Create Category', new_category_path

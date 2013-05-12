@@ -1,0 +1,5 @@
+= simple_form_for(@category, :html => {:class => 'form-vertical' }) do |f|
+  = f.error_notification
+  = display_base_errors @category
+  = f.input :name, :autofocus => true, :required=> true
+  = f.button :submit, 'Create', :class => 'btn-primary'
