@@ -9,7 +9,7 @@
 #  updated_at      :datetime         not null
 #
 
-class Connection_Invitation < ActiveRecord::Base
+class ConnectionInvitation < ActiveRecord::Base
   attr_accessible :connection_code, :user_id
   validates :connection_code, :uniqueness => true
 end

@@ -1,0 +1,2 @@
+module ConnectionInvitationsHelper
+end

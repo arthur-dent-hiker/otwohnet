@@ -11,7 +11,7 @@
 
 require 'spec_helper'
 
-describe Connection_Invitation do
+describe ConnectionInvitation do
    before(:each) do
    	@code=SecureRandom.hex(8)
     @attr = {
@@ -20,10 +20,10 @@ describe Connection_Invitation do
     }
   end
   it "should create a new instance given a valid attribute" do
-    Connection_Invitation.create!(@attr)
+    ConnectionInvitation.create!(@attr)
   end
   it "should not be valid if other code exists" do
-  	Connection_Invitation.create!(@attr)
-  	Connection_Invitation.create(:user_id=>3, :connection_code=>@code).should_not be_valid
+  	ConnectionInvitation.create!(@attr)
+  	ConnectionInvitation.create(:user_id=>3, :connection_code=>@code).should_not be_valid
   end
 end

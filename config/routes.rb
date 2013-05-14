@@ -2,6 +2,8 @@ Otwohnet::Application.routes.draw do
   resources :roles
 
   resources :categories
+  resources :connection_invitations
+  match 'connection_invitations/make' => "connection_invitations#make", :via=>:post, :as=>"new_connection_invitations"
 
   authenticated :user do
     root :to => 'home#index'

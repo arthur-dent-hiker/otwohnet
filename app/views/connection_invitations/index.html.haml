@@ -1,0 +1,7 @@
+= simple_form_for :connection_invitation, :url=> '/connection_invitations/make/', :html => {:class => 'form-vertical' } do |f|
+  = f.input :count, :as => :integer, :required=> true
+  = f.button :submit, 'Create', :class => 'btn-primary'
+- @connection_invitations.each do |ci|
+  = ci.connection_code
+  %br
+= will_paginate @connection_invitations
