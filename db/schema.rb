@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130513043651) do
+ActiveRecord::Schema.define(:version => 20130514032132) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -19,14 +19,14 @@ ActiveRecord::Schema.define(:version => 20130513043651) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "connections", :force => true do |t|
+  create_table "connection_invitations", :force => true do |t|
     t.integer  "user_id"
     t.integer  "connection_code", :null => false
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
   end
 
-  add_index "connections", ["user_id", "connection_code"], :name => "index_connections_on_user_id_and_connection_code", :unique => true
+  add_index "connection_invitations", ["user_id", "connection_code"], :name => "index_connections_on_user_id_and_connection_code", :unique => true
 
   create_table "roles", :force => true do |t|
     t.string   "name"
