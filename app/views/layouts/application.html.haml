@@ -9,6 +9,8 @@
         = csrf_meta_tags
         = yield(:head)
   %body{:class => "#{controller_name} #{action_name}"}
+    - if current_staff_user
+      = render 'user_impersonate/header'
     .navbar.navbar-fixed-top
       %nav.navbar-inner
         .container

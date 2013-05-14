@@ -179,6 +179,8 @@ GEM
     uglifier (2.1.0)
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
+    user_impersonate (0.8.0)
+      rails (~> 3.2.0)
     warden (1.2.1)
       rack (>= 1.0)
     will_paginate (3.0.4)
@@ -213,4 +215,5 @@ DEPENDENCIES
   simple_form (>= 2.1.0)
   thin (>= 1.5.0)
   uglifier (>= 1.0.3)
+  user_impersonate
   will_paginate

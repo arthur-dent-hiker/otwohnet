@@ -1,0 +1,11 @@
+%div#impersonating
+  .impersonate-controls.page
+    .impersonate-info.grid_12
+      You (
+      %span.admin_name= current_staff_user
+      ) are impersonating
+      %span.user_name= current_user
+      ( User id:
+      %span.user_id= current_user.id
+      )
+      = link_to("Revert", impersonate_engine.revert_impersonate_user_path)

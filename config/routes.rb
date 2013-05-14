@@ -1,4 +1,6 @@
 Otwohnet::Application.routes.draw do
+  mount UserImpersonate::Engine => "/impersonate", as: "impersonate_engine"
+
   resources :roles
 
   resources :categories

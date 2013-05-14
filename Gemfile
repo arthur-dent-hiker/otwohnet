@@ -11,6 +11,7 @@ gem 'jquery-rails'
 gem "thin", ">= 1.5.0"
 gem "pg", ">= 0.15.0"
 gem "haml-rails", ">= 0.4"
+gem "user_impersonate"
 gem "html2haml", ">= 1.0.1", :group => :development
 gem "rspec-rails", ">= 2.12.2", :group => [:development, :test]
 gem "capybara", ">= 2.0.3", :group => :test
