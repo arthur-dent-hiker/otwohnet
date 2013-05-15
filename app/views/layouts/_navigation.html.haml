@@ -12,7 +12,8 @@
     %li
       = link_to 'Edit account', edit_user_registration_path
     %li
-      Hello, #{current_user.first_name}
+      Hello, 
+      = link_to "#{current_user.first_name}", user_path(current_user)
     - if current_user.has_role? :admin
       %li
         = link_to 'Admin', users_path
