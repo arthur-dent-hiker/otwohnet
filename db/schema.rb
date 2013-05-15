@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130514035904) do
+ActiveRecord::Schema.define(:version => 20130515161015) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -27,6 +27,13 @@ ActiveRecord::Schema.define(:version => 20130514035904) do
   end
 
   add_index "connection_invitations", ["user_id", "connection_code"], :name => "index_connections_on_user_id_and_connection_code", :unique => true
+
+  create_table "connectionships", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "friend_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "roles", :force => true do |t|
     t.string   "name"

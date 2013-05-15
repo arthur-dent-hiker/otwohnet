@@ -11,5 +11,6 @@
 
 class ConnectionInvitation < ActiveRecord::Base
   attr_accessible :connection_code, :user_id
+  belongs_to :user
   validates :connection_code, :uniqueness => true
 end

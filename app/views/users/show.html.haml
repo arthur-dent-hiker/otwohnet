@@ -3,3 +3,6 @@
   User: #{@user.first_name} #{@user.last_name}
 %p
   Email: #{@user.email if @user.email}
+- @user.connectionships.each do |connectionship|
+  = connectionship.friend.email
+  %br
