@@ -1,6 +1,7 @@
 class ConnectionsController < ApplicationController
 	def create
-		@connectionship =current_user.connectionships.build(:friend_id => params[:friend_id])
+		
+		@connectionship =current_user.connectionships.build(:connection_id => params[:connection_id])
 		if @connectionship.save
 			redirect_to root_url, :notice=>"Connection created"
 		else

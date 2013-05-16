@@ -5,5 +5,5 @@
   Email: #{@user.email if @user.email}
 %h3 Connections
 - @user.connectionships.each do |connectionship|
-  = link_to "#{connectionship.friend.email}", user_path(connectionship.friend)
+  = link_to "#{connectionship.connection.email}", user_path(connectionship.connection)
   %br
