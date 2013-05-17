@@ -1,0 +1,5 @@
+-@skills.each do |skill|
+	= link_to skill.name, skill_path(skill)
+	= link_to '(Edit)', edit_skill_path(skill)
+	%br
+= link_to 'Create Skill', new_skill_path

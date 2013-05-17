@@ -1,4 +1,5 @@
 Otwohnet::Application.routes.draw do
+  
   mount UserImpersonate::Engine => "/impersonate", as: "impersonate_engine"
 
   resources :roles
@@ -13,4 +14,5 @@ Otwohnet::Application.routes.draw do
   root :to => "home#index"
   devise_for :users
   resources :users
+  resources :skills
 end
